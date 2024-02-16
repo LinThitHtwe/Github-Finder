@@ -1,9 +1,27 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { useNameSlice } from "@/store/nameSlice";
 
 const Navbar = () => {
+  const username = useNameSlice((state) => state.username);
+  const updateFirstName = useNameSlice((state) => state.setName);
+  const [searchUsername, setSearchUsername] = useState("");
+  useEffect(() => {
+    setSearchUsername(username);
+  }, []);
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    updateFirstName(searchUsername);
+  };
+
+  if (!searchUsername) {
+    console.log("no string");
+  }
+
   return (
     <nav className="flex items-center justify-between  px-6 py-5 sm:px-10 min-[756px]:px-6 min-[850px]:px-10">
       <Link
@@ -12,21 +30,35 @@ const Navbar = () => {
       >
         Github Finder
       </Link>
-      <form className=" relative overflow-hidden text-sm text-primary   drop-shadow-primary-lg transition-all duration-300 ease-in-out hover:drop-shadow-primary-search sm:text-2xl md:text-xl">
+      <form
+        onSubmit={handleSubmit}
+        className=" relative overflow-hidden text-sm text-primary   drop-shadow-primary-lg transition-all duration-300 ease-in-out hover:drop-shadow-primary-search sm:text-2xl md:text-xl"
+      >
         <FontAwesomeIcon
           className="absolute bottom-[32%] left-4 text-sm text-primary/70 md:text-lg"
           icon={faMagnifyingGlass}
         />
-        <FontAwesomeIcon
-          className="absolute bottom-[32%] right-[3.05rem] text-base min-[640px]:right-[4rem] min-[768px]:right-[22%]"
-          icon={faXmark}
-        />
+        <span
+          className={`${searchUsername ? "" : "hidden"}`}
+          onClick={() => setSearchUsername("")}
+        >
+          <FontAwesomeIcon
+            className={`absolute bottom-[32%] right-[3.05rem] text-base min-[640px]:right-[4rem] min-[768px]:right-[22%] `}
+            icon={faXmark}
+          />
+        </span>
+
         <input
           type="text"
+          value={searchUsername}
+          onChange={(e) => setSearchUsername(e.target.value)}
           className="w-full  rounded-3xl bg-primary/10 py-[0.65rem] pl-12 pr-16 font-semibold outline-none placeholder:text-text/20 focus:bg-primary/[0.13]  sm:pr-24 md:w-auto md:pr-[8.1rem] "
           placeholder="Search Github Username"
         />
-        <button className="absolute bottom-0 right-0 top-0  w-fit rounded-3xl bg-primary text-center font-extrabold text-background/90 transition-all duration-500 ease-in-out hover:bg-[#b899e6]  md:w-1/5">
+        <button
+          type="submit"
+          className="absolute bottom-0 right-0 top-0  w-fit rounded-3xl bg-primary text-center font-extrabold text-background/90 transition-all duration-500 ease-in-out hover:bg-[#b899e6]  md:w-1/5"
+        >
           <span className="hidden  pb-1 text-[1.05rem] tracking-tight min-[768px]:inline-block">
             Search
           </span>
