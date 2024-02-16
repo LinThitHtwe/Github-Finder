@@ -9,7 +9,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-soft-background mt-[500px] flex h-36 flex-col items-center justify-center gap-6 text-primary">
+    <footer className="mt-8 flex h-36 flex-col items-center justify-center gap-6 bg-soft-background text-primary">
       <h1 className="text-center text-base">Made With ❤️ and NextJs</h1>
       <div className="flex items-center gap-6 text-2xl transition-all  ease-in-out">
         <Link

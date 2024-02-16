@@ -22,6 +22,7 @@ const config: Config = {
         "primary-lg": "15px 20px 30px rgba(172, 137, 225, 0.25)",
         "primary-xl": "0 35px 35px rgba(172, 137, 225, 0.25)",
         "primary-github": "0 5px 24px rgba(172, 137, 225, 0.25)",
+        "primary-search": "12px 6px 35px rgba(172, 137, 225, 0.6)",
       },
     },
   },

@@ -14,14 +14,14 @@ import React from "react";
 
 const UserProfile = () => {
   return (
-    <div className="w-full  md:w-1/4  ">
-      <div className=" mx-auto h-52 w-52">
+    <div className="w-full  md:w-1/4 ">
+      <div className=" z-10 mx-auto h-52 w-52 md:h-44 md:w-44  min-[914px]:h-52 min-[914px]:w-52">
         <Image
           alt="LinThit27"
           src={"https://avatars.githubusercontent.com/u/106507721?v=4"}
           width={400}
           height={400}
-          className="drop-shadow-primary-lg h-full w-full rounded-full object-cover"
+          className="h-full w-full rounded-full object-cover drop-shadow-primary-lg"
         />
       </div>
       <div className="mt-8 px-1 lg:px-3 ">
@@ -37,13 +37,13 @@ const UserProfile = () => {
         </p>
         <Link
           href={"/"}
-          className=" drop-shadow-primary-github hover:bg-soft-background  mx-3 my-7 flex items-center justify-center gap-2 rounded-3xl border border-primary/80 p-3 text-primary shadow-primary transition-all duration-300 ease-in-out hover:border-primary lg:mx-7"
+          className=" mx-auto my-7   flex items-center justify-center gap-2 rounded-3xl border border-primary/80 p-3 text-primary shadow-primary drop-shadow-primary-github transition-all duration-300 ease-in-out hover:border-primary hover:bg-soft-background min-[456px]:w-1/2 md:w-full "
         >
           <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-          <span>View On Github</span>
+          <span className="text-sm lg:text-base">View On Github</span>
         </Link>
         <div className="flex flex-col justify-evenly min-[617px]:flex-row min-[768px]:flex-col">
-          <ul className="my-8 list-none  lg:px-4">
+          <ul className=" mt-4 list-none  lg:px-4">
             <li className="flex items-center gap-6">
               <FontAwesomeIcon
                 icon={faLocationDot}
