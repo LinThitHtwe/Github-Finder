@@ -12,6 +12,7 @@ import {
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { formatDistanceToNow } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -42,7 +43,7 @@ const UserProfile = () => {
               @{data.login}
             </p>
             <p
-              className={`${data.bio ? "block" : "hidden"} truncate text-text`}
+              className={`${data.bio ? "block" : "hidden"} break-words text-text`}
             >
               {data.bio}
             </p>
@@ -123,6 +124,13 @@ const UserProfile = () => {
                   Following
                   <FontAwesomeIcon icon={faUsers} className="text-text" />
                   <span className="">{formatCount(data.following)}</span>
+                </li>
+
+                <li className="mt-4 flex items-center gap-5 break-words ">
+                  Joined Github{" "}
+                  {formatDistanceToNow(new Date(data.created_at), {
+                    addSuffix: true,
+                  })}
                 </li>
               </ul>
             </div>

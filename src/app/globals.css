@@ -19,3 +19,40 @@
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(172, 137, 225, 0.2);
 }
+
+#card {
+  z-index: 1;
+}
+
+.blob {
+  filter: blur(60px);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgb(171, 136, 225, 0.7);
+}
+
+.fakeblob {
+  display: hidden;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.inner {
+  backdrop-filter: blur(10px);
+  transition: all 300ms ease-in-out;
+}
+
+.card:hover > .inner {
+  background: rgb(19, 13, 34, 0.8);
+  backdrop-filter: blur(0px);
+}

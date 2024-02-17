@@ -18,10 +18,6 @@ const Navbar = () => {
     updateFirstName(searchUsername);
   };
 
-  if (!searchUsername) {
-    console.log("no string");
-  }
-
   return (
     <nav className="flex items-center justify-between  px-6 py-5 sm:px-10 min-[756px]:px-6 min-[850px]:px-10">
       <Link

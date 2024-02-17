@@ -21,10 +21,11 @@ export default function Home() {
   const username = useNameSlice((state) => state.username);
   const queryClient = useQueryClient();
   const { data } = useQuery("repos", () => fetchRepoData(username));
+
   useEffect(() => {
-    // Invalidate all queries and trigger a re-fetch when the username changes
     queryClient.invalidateQueries("all");
   }, [username]);
+
   const [currentTab, setCurrentTab] = useState("Forks");
 
   const renderTabContent = () => {
@@ -44,8 +45,8 @@ export default function Home() {
 
         <div className="w-full md:w-3/4">
           <img
-            // src={`https://github-contributions-api.deno.dev/LinThit27.svg?scheme=deeppurple&no-total=false&font-color=AB88E1`}
-            src=""
+            // src={`https://github-contributions-api.deno.dev/${username}.svg?scheme=deeppurple&no-total=false&font-color=AB88E1`}
+            src={""}
             alt={`${username}'s Contribution Graph`}
             width={800}
             height={400}
@@ -53,11 +54,17 @@ export default function Home() {
           />
 
           <div className="mt-6 flex justify-evenly overflow-x-auto  border-b border-primary/50 pb-0">
-            <button className="w-auto flex-1 border-b-4 border-text p-2 text-center font-medium ">
+            <button
+              onClick={() => setCurrentTab("Repositories")}
+              className="w-auto flex-1 border-b-4 border-text p-2 text-center font-medium "
+            >
               Repositories
             </button>
-            <button className="w-auto flex-1 border-b-4  border-transparent p-2 text-center font-medium transition-all duration-700  ease-in-out hover:border-primary ">
-              Forked
+            <button
+              onClick={() => setCurrentTab("Forks")}
+              className="w-auto flex-1 border-b-4  border-transparent p-2 text-center font-medium transition-all duration-700  ease-in-out hover:border-primary "
+            >
+              Forks
             </button>
             <button className="w-auto flex-1  border-primary p-2 text-center font-medium ">
               Followers
