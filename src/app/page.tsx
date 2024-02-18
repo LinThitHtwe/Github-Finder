@@ -16,6 +16,7 @@ import { formatCount } from "@/utils/formatCount";
 import { useNameSlice } from "../store/nameSlice";
 import { useEffect, useState } from "react";
 import Repositories from "./Repositories";
+import Follow from "./Follow";
 
 export default function Home() {
   const username = useNameSlice((state) => state.username);
@@ -34,6 +35,8 @@ export default function Home() {
         return <Repositories isForked={false} />;
       case "Forks":
         return <Repositories isForked={true} />;
+      case "Following":
+        return <Follow isFollowing={true} />;
     }
   };
 
@@ -66,7 +69,10 @@ export default function Home() {
             >
               Forks
             </button>
-            <button className="w-auto flex-1  border-primary p-2 text-center font-medium ">
+            <button
+              onClick={() => setCurrentTab("Following")}
+              className="w-auto flex-1  border-primary p-2 text-center font-medium "
+            >
               Followers
             </button>
             <button className="w-auto flex-1  border-primary p-2 text-center font-medium ">

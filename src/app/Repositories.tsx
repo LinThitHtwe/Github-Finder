@@ -72,7 +72,7 @@ const Repositories = ({ isForked }: { isForked: boolean }) => {
           id={"card"}
           className="card relative max-h-40 min-h-40 w-full  max-w-[88vw] overflow-hidden rounded-xl border border-primary/10  bg-primary/5  p-[0.15rem] min-[375px]:max-w-[90vw] min-[425px]:max-w-[92vw]  md:max-h-36 md:min-h-36 "
         >
-          <div className="inner h-full w-full rounded-[0.55rem] bg-soft-background p-2">
+          <div className="inner h-full w-full rounded-[0.6rem] bg-soft-background p-2">
             <div className=" mx-3  flex items-center justify-between ">
               <h4 className="  w-[88%] truncate text-2xl  font-semibold tracking-tight group-hover:z-10">
                 {/* {repo.name} */} Text

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 2px;
 }
 
 ::-webkit-scrollbar-track {
@@ -11,8 +11,8 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(172, 137, 225, 0.1);
-  height: 5px !important;
+  background: linear-gradient(rgb(171, 136, 225), rgba(207, 63, 63, 0.6));
+  height: 1px !important;
   border-radius: 20px;
 }
 
@@ -33,7 +33,7 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: rgb(171, 136, 225, 0.7);
+  background: linear-gradient(rgb(171, 136, 225, 0.9), rgba(207, 63, 63, 0.8));
 }
 
 .fakeblob {
@@ -48,11 +48,11 @@
 }
 
 .inner {
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(40px);
   transition: all 300ms ease-in-out;
 }
 
 .card:hover > .inner {
-  background: rgb(19, 13, 34, 0.8);
+  background: rgb(19, 13, 34, 0.93);
   backdrop-filter: blur(0px);
 }
