@@ -17,7 +17,7 @@ import { useEffect, useRef } from "react";
 const Repositories = ({ isForked }: { isForked: boolean }) => {
   const username = useNameSlice((state) => state.username);
 
-  // const { data } = useQuery("repos", () => fetchRepoData(username));
+  const { data } = useQuery("repos", () => fetchRepoData(username));
 
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 

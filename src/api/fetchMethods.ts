@@ -15,7 +15,7 @@ export const fetchRepoData = async (username: string) => {
 
 export const fetchUserData = async (username: string) => {
   try {
-    const response = await fetch(`https://api.githeub.com/users/${username}`);
+    const response = await fetch(`https://api.githuxb.com/users/${username}`);
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }

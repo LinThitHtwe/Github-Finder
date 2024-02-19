@@ -2,6 +2,7 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faArrowRight,
   faArrowUpRightFromSquare,
   faCode,
   faCodeFork,
@@ -78,26 +79,30 @@ const Follow = ({ isFollowing }: { isFollowing: boolean }) => {
               width={400}
               height={400}
               className="h-full w-full rounded-full object-cover drop-shadow-primary-lg"
-            /> */}
+            />  rounded-[0.35rem] */}
                 <img
                   src="https://avatars.githubusercontent.com/u/106507721?v=4"
-                  className="h-full w-full rounded-[0.35rem] object-cover"
+                  className="h-full w-full rounded-full object-cover"
                 />
               </div>
             </div>
             <div className=" flex  flex-col justify-center gap-2">
               <p className="text-xl font-semibold">Lin Thit Htwe</p>
-              <p className="text-sm text-primary/70">@LinThit27</p>
+              <div className=" flex w-fit cursor-pointer  items-center gap-1 border-b border-transparent text-sm text-primary/70 underline-offset-[3px] transition-all duration-300 ease-in-out hover:border-primary/60 hover:text-primary  ">
+                @LinThit27
+                <FontAwesomeIcon icon={faArrowRight} />
+              </div>
             </div>
           </div>
-          <div className="absolute bottom-1 right-6 flex justify-end gap-4 text-2xl">
-            <Link href={"/"}>
-              <FontAwesomeIcon icon={faGithub} />
-            </Link>
-            <Link href={"/"}>
-              <FontAwesomeIcon icon={faMagnifyingGlass} />
-            </Link>
-          </div>
+
+          <Link
+            href={"/"}
+            target="_blank"
+            className="absolute bottom-[37%] right-6 flex justify-end gap-4 text-3xl transition-all duration-300 ease-in-out hover:-translate-y-1"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </Link>
+
           <div className="blob"></div>
           <div className="fakeblob "></div>
         </div>
