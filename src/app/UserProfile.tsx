@@ -60,7 +60,7 @@ const UserProfile = () => {
             // href={`${data.html_url}`}
             href={"/"}
             target="_blank"
-            className=" mx-auto my-7   flex items-center justify-center gap-2 rounded-3xl border border-primary/80 p-3 text-primary shadow-primary drop-shadow-primary-github transition-all duration-300 ease-in-out hover:border-primary hover:bg-soft-background min-[456px]:w-1/2 md:w-full "
+            className=" mx-auto my-7 flex   items-center justify-center gap-2 rounded-3xl border border-primary/80  p-3 text-primary shadow-primary drop-shadow-primary-github transition-all duration-300 ease-in-out hover:border-primary hover:bg-soft-background min-[456px]:w-1/2 md:w-full "
           >
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
             <span className="text-sm lg:text-base">View On Github</span>

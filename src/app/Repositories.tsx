@@ -130,7 +130,7 @@ const Repositories = ({ isForked }: { isForked: boolean }) => {
               </div>
             </div>
           </div>
-          <div className="blob"></div>
+          <div className="blob "></div>
           <div className="fakeblob "></div>
         </div>
       ))}

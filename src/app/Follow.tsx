@@ -68,42 +68,45 @@ const Follow = ({ isFollowing }: { isFollowing: boolean }) => {
         <div
           ref={(el) => (cardRefs.current[i] = el)}
           key={i}
-          className="card relative max-h-40 min-h-40 w-full  max-w-[88vw] overflow-hidden rounded-xl border border-primary/10  bg-primary/5  p-[0.15rem] min-[375px]:max-w-[90vw] min-[425px]:max-w-[92vw]  md:max-h-28 md:min-h-28 "
+          className="card relative max-h-32 min-h-32 w-full  max-w-[88vw] overflow-hidden rounded-xl border border-primary/10  bg-primary/5  p-[0.15rem] min-[375px]:max-w-[90vw] min-[425px]:max-w-[92vw]  md:max-h-28 md:min-h-28 "
         >
-          <div className="inner flex h-full w-full gap-2 rounded-[0.6rem] bg-soft-background">
+          <div className="inner flex h-full w-full  max-w-full gap-2 rounded-[0.6rem] bg-soft-background">
             <div className="flex items-center p-1">
-              <div className="ml-2 h-[95%] w-full">
-                {/* <Image
-              alt="LinThit27"
-              src={`${data.avatar_url}`}
-              width={400}
-              height={400}
-              className="h-full w-full rounded-full object-cover drop-shadow-primary-lg"
-            />  rounded-[0.35rem] */}
+              <div className="ml-2  h-[75%] min-w-[80px] max-w-[80px] lg:h-[90%]">
                 <img
                   src="https://avatars.githubusercontent.com/u/106507721?v=4"
-                  className="h-full w-full rounded-full object-cover"
+                  className="h-full w-full rounded-lg object-cover"
                 />
               </div>
             </div>
             <div className=" flex  flex-col justify-center gap-2">
-              <p className="text-xl font-semibold">Lin Thit Htwe</p>
-              <div className=" flex w-fit cursor-pointer  items-center gap-1 border-b border-transparent text-sm text-primary/70 underline-offset-[3px] transition-all duration-300 ease-in-out hover:border-primary/60 hover:text-primary  ">
-                @LinThit27
+              <p className=" max-w-[80%] truncate text-xl   font-semibold min-[375px]:max-w-[96%] min-[425px]:max-w-full min-[550px]:max-w-[55%] min-[670px]:max-w-full min-[768px]:max-w-[40%] min-[868px]:max-w-[60%] lg:max-w-[70%] min-[1124px]:max-w-[90%]  min-[1224px]:max-w-full ">
+                AyeChanHtunNaing
+              </p>
+              <button className=" flex w-fit  items-center gap-1  break-all border-b border-transparent text-sm text-primary/70 underline-offset-[3px] transition-all duration-300 ease-in-out hover:border-primary/60 hover:text-primary  ">
+                <span className="max-w-[55%] truncate min-[375px]:max-w-[65%] min-[425px]:max-w-full min-[550px]:max-w-[48%] min-[670px]:max-w-[80%] md:max-w-[44%] min-[868px]:max-w-[64%] min-[932px]:max-w-[55%] lg:max-w-[65%] min-[1124px]:max-w-[85%] min-[1224px]:max-w-full ">
+                  @aungkaungmyat-is-coding
+                </span>
                 <FontAwesomeIcon icon={faArrowRight} />
-              </div>
+              </button>
+              <Link
+                href={"/"}
+                target="_blank"
+                className="   flex gap-4 text-2xl transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-text min-[490px]:hidden min-[550px]:flex min-[932px]:hidden"
+              >
+                <FontAwesomeIcon icon={faGithub} />
+              </Link>
             </div>
+            <Link
+              href={"/"}
+              target="_blank"
+              className="absolute bottom-[37%] right-4  hidden justify-end gap-4 text-3xl transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-text min-[490px]:flex min-[550px]:hidden min-[932px]:flex xl:right-6"
+            >
+              <FontAwesomeIcon icon={faGithub} />
+            </Link>
           </div>
 
-          <Link
-            href={"/"}
-            target="_blank"
-            className="absolute bottom-[37%] right-6 flex justify-end gap-4 text-3xl transition-all duration-300 ease-in-out hover:-translate-y-1"
-          >
-            <FontAwesomeIcon icon={faGithub} />
-          </Link>
-
-          <div className="blob"></div>
+          <div className="blob "></div>
           <div className="fakeblob "></div>
         </div>
       ))}

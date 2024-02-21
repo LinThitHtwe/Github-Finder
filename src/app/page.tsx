@@ -41,7 +41,8 @@ export default function Home() {
   };
 
   return (
-    <main className=" w-1/">
+    <main className="h-auto w-full  bg-[linear-gradient(to_right,#AB88E104_1px,transparent_1px),linear-gradient(to_bottom,#AB88E104_1px,transparent_1px)] bg-[size:28px_28px]">
+      {/* //<main> */}
       <Navbar />
       <div className="flex  h-auto  flex-wrap gap-2 overflow-hidden  p-5 text-primary md:flex-nowrap md:gap-10 md:p-8 lg:p-10">
         <UserProfile />
