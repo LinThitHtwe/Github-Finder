@@ -52,6 +52,6 @@
 }
 
 .card:hover > .inner {
-  background: rgb(19, 13, 34, 0.87);
+  background: rgb(19, 13, 34, 0.9);
   backdrop-filter: blur(0px);
 }

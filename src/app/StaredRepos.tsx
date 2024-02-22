@@ -1,36 +1,23 @@
 "use client";
 
 import { useQuery } from "react-query";
-import { fetchRepoData } from "@/api/fetchMethods";
+import { fetchRepoData, fetchStarredData } from "@/api/fetchMethods";
 import { useNameSlice } from "../store/nameSlice";
 import RepositoryCard from "./RepositoryCard";
-import PaginatedComponent from "./PaginationComponent";
-import { useState } from "react";
 
-const Repositories = ({ isForked }: { isForked: boolean }) => {
+const StaredRepos = () => {
   const username = useNameSlice((state) => state.username);
-  const { data } = useQuery("repos", () => fetchRepoData(username));
-  const [currentPage, setCurrentPage] = useState<number>(0);
-  // const currentPageItem = exampleData.slice(
-  //   currentPage * itemsPerPage,
-  //   (currentPage + 1) * itemsPerPage,
-  // );
+
+  const { data } = useQuery("starred", () => fetchStarredData(username));
 
   return (
-    <div className="mt-10 grid gap-5  min-[550px]:grid-cols-2  lg:grid-cols-2 ">
+    <div className="mt-10 grid gap-5  min-[550px]:grid-cols-2  lg:grid-cols-2">
       {/* {data &&
         data.length > 0 &&
         data
           .filter((repo: any) => repo.fork === isForked)
           .map((repo: any, index: number) => ( */}
-      {/* data
-  .filter((repo: any) => repo.fork === isForked)
-  .slice(
-    currentPage * itemsPerPage,
-    (currentPage + 1) * itemsPerPage
-  )
-  .map((repo: any, index: number) => */}
-      {Array.from({ length: 12 }).map((_, i) => (
+      {Array.from({ length: 10 }).map((_, i) => (
         <RepositoryCard
           data={[
             {
@@ -182,9 +169,8 @@ const Repositories = ({ isForked }: { isForked: boolean }) => {
           ]}
         />
       ))}
-      <PaginatedComponent />
     </div>
   );
 };
 
-export default Repositories;
+export default StaredRepos;
