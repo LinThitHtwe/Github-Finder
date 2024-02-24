@@ -27,7 +27,7 @@ const Footer = () => {
           <FontAwesomeIcon icon={faLinkedin} />
         </Link>
         <Link
-          href={"/"}
+          href={"https://www.instagram.com/linthit2745/"}
           target="_blank"
           className="duration-500 hover:-translate-y-1 hover:text-[#d62976]"
         >
