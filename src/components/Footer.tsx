@@ -13,19 +13,22 @@ const Footer = () => {
       <h1 className="text-center text-base">Made With ❤️ and NextJs</h1>
       <div className="flex items-center gap-6 text-2xl transition-all  ease-in-out">
         <Link
-          href={"/"}
+          href={"https://github.com/LinThit27/Github-Finder"}
+          target="_blank"
           className="duration-500 hover:-translate-y-1 hover:text-[#f5f5f5]"
         >
           <FontAwesomeIcon className="" icon={faGithub} />
         </Link>
         <Link
-          href={"/"}
+          href={"/https://www.linkedin.com/in/lin-thit-htwe-845b64294/"}
+          target="_blank"
           className="duration-500 hover:-translate-y-1 hover:text-[#0077B5]"
         >
           <FontAwesomeIcon icon={faLinkedin} />
         </Link>
         <Link
           href={"/"}
+          target="_blank"
           className="duration-500 hover:-translate-y-1 hover:text-[#d62976]"
         >
           <FontAwesomeIcon icon={faInstagram} />

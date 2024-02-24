@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} max-h-full min-h-screen bg-background text-text`}
+        className={`${inter.className} max-h-full min-h-screen bg-background bg-[linear-gradient(to_right,#AB88E104_1px,transparent_1px),linear-gradient(to_bottom,#AB88E104_1px,transparent_1px)] bg-[size:28px_28px] text-text`}
       >
         <Provider>{children}</Provider>
       </body>

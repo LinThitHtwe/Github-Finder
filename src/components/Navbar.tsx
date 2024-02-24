@@ -8,14 +8,14 @@ import { useNameSlice } from "@/store/nameSlice";
 
 const Navbar = () => {
   const username = useNameSlice((state) => state.username);
-  const updateFirstName = useNameSlice((state) => state.setName);
+  const updateName = useNameSlice((state) => state.setName);
   const [searchUsername, setSearchUsername] = useState("");
   useEffect(() => {
     setSearchUsername(username);
-  }, []);
+  }, [username]);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    updateFirstName(searchUsername);
+    updateName(searchUsername);
   };
 
   return (

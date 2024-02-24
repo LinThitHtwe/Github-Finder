@@ -33,7 +33,7 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: linear-gradient(rgb(171, 136, 225, 0.9), rgba(207, 63, 63, 0.8));
+  background: linear-gradient(rgb(171, 136, 225, 1), rgba(207, 63, 63, 1));
 }
 .fakeblob {
   display: hidden;
