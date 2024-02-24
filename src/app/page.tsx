@@ -8,13 +8,10 @@ import { useEffect, useState } from "react";
 import Repositories from "../components/Repositories";
 import Follow from "../components/Follow";
 import StaredRepos from "../components/StaredRepos";
-import { useErrornameSlice } from "@/store/errorSlice";
 import ErrorComponent from "@/components/ErrorComponent";
 
 export default function Home() {
   const username = useNameSlice((state) => state.username);
-  // const errorName = useErrornameSlice((state) => state.errorName);
-  //const updateErrorname = useErrornameSlice((state) => state.setErrorname);
   const queryClient = useQueryClient();
   const [errorName, setErrorName] = useState<string | null>(null);
 
