@@ -7,7 +7,7 @@ const ErrorComponent = ({ errorName }: { errorName: string }) => {
       case error.notFound:
         return (
           <>
-            <p className="text-3xl font-semibold text-primary">
+            <p className="text-center text-3xl font-semibold text-primary">
               Opps, Username not found
             </p>
             <img
@@ -20,7 +20,7 @@ const ErrorComponent = ({ errorName }: { errorName: string }) => {
       case error.tooManyRequest:
         return (
           <>
-            <p className="text-3xl font-semibold text-primary ">
+            <p className="text-center text-3xl font-semibold text-primary">
               Sorry • ᴖ • , Too many request
             </p>
             <img
@@ -34,7 +34,7 @@ const ErrorComponent = ({ errorName }: { errorName: string }) => {
       default:
         return (
           <>
-            <p className="text-3xl font-semibold text-primary ">
+            <p className="text-center text-3xl font-semibold text-primary">
               Something went wrong • ᴖ •
             </p>
             <img

@@ -39,6 +39,11 @@ const StaredRepos = () => {
           />
         </>
       )}
+      {data && data.length == 0 && (
+        <p className=" mt-5 text-lg font-medium sm:text-2xl">
+          {username} has no starred reporitory
+        </p>
+      )}
       {isLoading && <LoadingRepository />}
     </>
   );

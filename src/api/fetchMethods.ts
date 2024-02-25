@@ -2,7 +2,7 @@ import { checkResponseStatus } from "@/errors/checkResponseStatus";
 
 export const fetchRepoData = async (username: string) => {
   const response = await fetch(
-    `https://api.github.com/users/${username}/repos`,
+    `https://api.github.com/users/${username}/repos?per_page=1000`,
   );
   if (!response.ok) checkResponseStatus(response.status);
   const data = await response.json();
@@ -18,7 +18,7 @@ export const fetchUserData = async (username: string) => {
 
 export const fetchStarredData = async (username: string) => {
   const response = await fetch(
-    `https://api.github.com/users/${username}/starred`,
+    `https://api.github.com/users/${username}/starred?per_page=10000`,
   );
   if (!response.ok) checkResponseStatus(response.status);
   const data = await response.json();
@@ -27,7 +27,7 @@ export const fetchStarredData = async (username: string) => {
 
 export const fetchFollowersData = async (username: string) => {
   const response = await fetch(
-    `https://api.github.com/users/${username}/followers`,
+    `https://api.github.com/users/${username}/followers?per_page=100000`,
   );
   if (!response.ok) checkResponseStatus(response.status);
   const data = await response.json();
@@ -36,7 +36,7 @@ export const fetchFollowersData = async (username: string) => {
 
 export const fetchFollowingData = async (username: string) => {
   const response = await fetch(
-    `https://api.github.com/users/${username}/following`,
+    `https://api.github.com/users/${username}/following?per_page=100000`,
   );
   if (!response.ok) checkResponseStatus(response.status);
   const data = await response.json();

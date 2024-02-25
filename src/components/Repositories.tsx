@@ -35,6 +35,15 @@ const Repositories = ({ isForked }: { isForked: boolean }) => {
             .slice(currentPage * 10, (currentPage + 1) * 10)}
         />
       )}
+      {data &&
+        data.filter((repo: Repository) => repo.fork === isForked).length ==
+          0 && (
+          <p className="mt-3 text-lg font-medium sm:text-2xl">
+            {!isForked
+              ? `${username} has no public reporitory `
+              : `${username} has no public forks`}
+          </p>
+        )}
       {isLoading && <LoadingRepository />}
 
       {data && data.length > 0 && (

@@ -24,14 +24,14 @@ const PaginatedComponent = ({
           nextLabel={"Next"}
           breakLabel={"..."}
           pageCount={pageCount}
-          marginPagesDisplayed={2}
+          marginPagesDisplayed={1}
           pageRangeDisplayed={2}
           onPageChange={handlePageChange}
           breakLinkClassName="block tracking-wider"
           breakClassName="transation-all p-1 border-b-2 border-transparent text-center  duration-300 ease-in-out hover:text-text hover:-translate-y-1"
-          pageClassName=" transation-all p-1  text-center  duration-300 ease-in-out  hover:-translate-y-1 w-[6%]"
+          pageClassName=" transation-all p-1  text-center  duration-300 ease-in-out hover:text-text  hover:-translate-y-1 w-[6%]"
           containerClassName={
-            " flex justify-around w-full mr-10 items-center  col-span-2 mt-8 font-semibold text-primary"
+            " flex  flex-warp justify-around w-full mr-10 items-center  col-span-2 mt-8 font-semibold text-primary"
           }
           pageLinkClassName=" block backdrop-blur-2xl"
           activeClassName={

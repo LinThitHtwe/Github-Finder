@@ -83,6 +83,13 @@ const Follow = ({ isFollowing }: { isFollowing: boolean }) => {
   return (
     <>
       <div className="mt-10 grid gap-5  min-[550px]:grid-cols-2 ">
+        {data && data.length == 0 && (
+          <p className="col-span-2 mt-2 text-lg font-medium sm:text-2xl">
+            {isFollowing
+              ? `${username} has no following `
+              : `${username} has no follower`}
+          </p>
+        )}
         {data &&
           data.length > 0 &&
           data
