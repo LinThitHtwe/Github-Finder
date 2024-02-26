@@ -1,16 +1,23 @@
 # Github Finder
 
-A website to search Github user account 
 
-This was develop using NextJs and TailwindCss
+![Project Image](./docs/project.jpg)
 
-Use [Github REST API ](https://docs.github.com/en/rest)
-And For contribution graph , I used [deno-github-contributions-api](https://github.com/kawarimidoll/deno-github-contributions-api)
 
-Contributions and Feedback are welcome
+Welcome to the GitHub User Search website, a NextJs and TailwindCss project designed for seamless GitHub user account exploration.
 
-Enjoy this project ? 
-Leave a star 
+## Overview
+
+This project use with the [GitHub REST API](https://docs.github.com/en/rest)  for searching GitHub data and [deno-github-contributions-api](https://github.com/kawarimidoll/deno-github-contributions-api) for  the contribution graph .
+
+## Contributions
+
+Feedback and Contributions are welcome 
+
+## Star the Project
+
+If you find this project useful or enjoyable, consider leaving a star. Your support motivates me to continue improving and enhancing the features.
+
 
 <details>
 <summary>Project Setup</summary>
