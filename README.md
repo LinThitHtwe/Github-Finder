@@ -8,7 +8,7 @@ Welcome to the GitHub User Search website, a NextJs and TailwindCss project desi
 
 ## Overview
 
-This project use with the [GitHub REST API](https://docs.github.com/en/rest)  for searching GitHub data and [deno-github-contributions-api](https://github.com/kawarimidoll/deno-github-contributions-api) for  the contribution graph .
+This project use with the [Github REST API](https://docs.github.com/en/rest)  for searching GitHub data and [deno-github-contributions-api](https://github.com/kawarimidoll/deno-github-contributions-api) for  the contribution graph .
 
 ## Contributions
 
@@ -18,6 +18,9 @@ Feedback and Contributions are welcome
 
 If you find this project useful or enjoyable, consider leaving a star. Your support motivates me to continue improving and enhancing the features.
 
+## Inspiration
+
+The project [https://blazor-wasm-git-finder.netlify.app/](https://blazor-wasm-git-finder.netlify.app/) by [@sannlynnhtun-coding](https://github.com/sannlynnhtun-coding) served as a source of inspiration for creating my own rendition of the project.
 
 <details>
 <summary>Project Setup</summary>
