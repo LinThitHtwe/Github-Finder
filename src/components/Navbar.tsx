@@ -22,6 +22,7 @@ const Navbar = () => {
     <nav className="flex items-center justify-between  px-6 py-5 sm:px-10 min-[756px]:px-6 min-[850px]:px-10">
       <Link
         href="/"
+        aria-label="Github Finder"
         className=" bg-gradient-to-r from-primary to-accent bg-clip-text text-2xl font-extrabold tracking-tighter text-transparent transition-all duration-300 ease-in-out hover:-translate-y-1 hover:from-[#c6adeb] hover:to-[#d65c5c] sm:text-3xl min-[756px]:text-4xl"
       >
         Github Finder
@@ -52,6 +53,7 @@ const Navbar = () => {
           placeholder="Search Github Username"
         />
         <button
+          aria-label="Search Github Username"
           type="submit"
           className="absolute bottom-0 right-0 top-0  w-fit rounded-3xl bg-primary text-center font-extrabold text-background/90 transition-all duration-500 ease-in-out hover:bg-[#b899e6]  md:w-1/5"
         >

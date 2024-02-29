@@ -44,7 +44,9 @@ const UserProfile = ({
               alt="LinThit27"
               src={`${data.avatar_url}`}
               width={400}
+              quality={70}
               height={400}
+              placeholder="empty"
               className="h-full w-full rounded-full object-cover drop-shadow-primary-lg"
             />
           </div>
@@ -63,6 +65,7 @@ const UserProfile = ({
             <Link
               href={`${data.html_url}`}
               target="_blank"
+              aria-label={`View ${username} on github`}
               className=" mx-auto my-7 flex   items-center justify-center gap-2 rounded-3xl border border-primary/80  p-3 text-primary shadow-primary drop-shadow-primary-github transition-all duration-300 ease-in-out hover:border-primary hover:bg-soft-background min-[456px]:w-1/2 md:w-full "
             >
               <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
@@ -97,6 +100,7 @@ const UserProfile = ({
                   />
                   <Link
                     href={`${data.blog}`}
+                    aria-label={`${username}'s blog`}
                     target="_blank"
                     className="truncate underline underline-offset-2 transition-all duration-300 ease-in-out hover:text-text"
                   >
@@ -113,6 +117,7 @@ const UserProfile = ({
                   <Link
                     href={`https://twitter.com/${data.twitter_username}`}
                     target="_blank"
+                    aria-label={`${username}'s twitter`}
                     className="underline underline-offset-2 transition-all duration-300 ease-in-out hover:text-text"
                   >
                     {data.twitter_username}

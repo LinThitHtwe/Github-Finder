@@ -63,10 +63,15 @@ const RepositoryCard = ({ data }: { data: Repository[] }) => {
             >
               <div className="inner h-full w-full rounded-[0.6rem] bg-soft-background p-2">
                 <div className=" mx-3  flex items-center justify-between ">
-                  <h4 className="  w-[88%] truncate text-2xl  font-semibold tracking-tight group-hover:z-10">
+                  <p className="  w-[88%] truncate text-2xl  font-semibold tracking-tight group-hover:z-10">
                     {repo.name}
-                  </h4>
-                  <Link href={`${repo.html_url}`} target="_blank" className="">
+                  </p>
+                  <Link
+                    href={`${repo.html_url}`}
+                    target="_blank"
+                    className=""
+                    aria-label="Open Github Repository"
+                  >
                     <FontAwesomeIcon
                       icon={faArrowUpRightFromSquare}
                       className="text-lg text-text/20 transition-all duration-500 ease-in-out hover:-translate-y-1 hover:text-text/80"

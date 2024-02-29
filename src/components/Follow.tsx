@@ -109,11 +109,14 @@ const Follow = ({ isFollowing }: { isFollowing: boolean }) => {
                         className="h-full w-full rounded-lg object-cover"
                         width={100}
                         height={100}
+                        quality={65}
+                        placeholder="empty"
                       />
                     </div>
                   </div>
                   <div className=" flex  flex-col justify-center gap-2">
                     <button
+                      aria-label={`Search ${user.login}`}
                       onClick={() => handleOnClickName(user.login)}
                       className={`block break-all text-start  text-xl font-semibold transition-all duration-300 hover:-translate-y-1 hover:text-text   lg:mr-16  `}
                     >
@@ -123,6 +126,7 @@ const Follow = ({ isFollowing }: { isFollowing: boolean }) => {
                     <Link
                       href={`${user.html_url}`}
                       target="_blank"
+                      aria-label={`${user.login}'s account on Github`}
                       className="   flex gap-4 text-2xl transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-text min-[490px]:hidden min-[550px]:flex min-[932px]:hidden"
                     >
                       <FontAwesomeIcon icon={faGithub} />
@@ -131,6 +135,7 @@ const Follow = ({ isFollowing }: { isFollowing: boolean }) => {
                   <Link
                     href={`${user.html_url}`}
                     target="_blank"
+                    aria-label={`${user.login}'s account on Github`}
                     className="absolute bottom-[37%] right-4  hidden justify-end gap-4 text-3xl transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-text min-[490px]:flex min-[550px]:hidden min-[932px]:flex xl:right-6"
                   >
                     <FontAwesomeIcon icon={faGithub} />
