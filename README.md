@@ -10,6 +10,13 @@ Welcome to the GitHub User Search website, a NextJs and TailwindCss project desi
 
 This project use with the [Github REST API](https://docs.github.com/en/rest)  for searching GitHub data and [deno-github-contributions-api](https://github.com/kawarimidoll/deno-github-contributions-api) for  the contribution graph .
 
+## Page Performance Test
+
+Results from [pagespeed.web.dev](https://pagespeed.web.dev/):
+
+![Page Test](./docs/page_performance.png)
+
+
 ## Contributions
 
 Feedback and Contributions are welcome 
