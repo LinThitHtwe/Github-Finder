@@ -47,7 +47,7 @@ const UserProfile = ({
               quality={70}
               height={400}
               placeholder="empty"
-              className="h-full w-full rounded-full object-cover drop-shadow-primary-lg"
+              className="h-full w-full rounded-full object-cover drop-shadow-primary-lg transition-all duration-300 ease-in-out hover:scale-105"
             />
           </div>
           <div className="mt-8 px-1 lg:px-3 ">

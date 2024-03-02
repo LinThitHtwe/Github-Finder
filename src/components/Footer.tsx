@@ -21,7 +21,7 @@ const Footer = () => {
           <FontAwesomeIcon className="" icon={faGithub} />
         </Link>
         <Link
-          href={"/https://www.linkedin.com/in/lin-thit-htwe-845b64294/"}
+          href={"https://www.linkedin.com/in/lin-thit-htwe-845b64294/"}
           target="_blank"
           aria-label="My Linkedin Account"
           className="duration-500 hover:-translate-y-1 hover:text-[#0077B5]"

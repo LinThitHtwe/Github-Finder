@@ -102,11 +102,11 @@ const Follow = ({ isFollowing }: { isFollowing: boolean }) => {
               >
                 <div className="inner flex h-full w-full  max-w-full gap-2 rounded-[0.6rem] bg-soft-background">
                   <div className="flex items-center p-1">
-                    <div className="ml-2  h-[75%] min-w-[80px] max-w-[80px] lg:h-[90%]">
+                    <div className="ml-2  h-[75%] min-w-[80px] max-w-[80px] overflow-hidden  rounded-lg lg:h-[90%]">
                       <Image
                         alt={`${user.login}`}
                         src={`${user.avatar_url}`}
-                        className="h-full w-full rounded-lg object-cover"
+                        className="h-full w-full  object-cover transition-all duration-300 ease-in-out hover:scale-110"
                         width={100}
                         height={100}
                         quality={65}
