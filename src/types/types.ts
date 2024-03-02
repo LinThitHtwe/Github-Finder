@@ -160,3 +160,10 @@ export type GitHubFollow = {
   type: "Organization";
   site_admin: boolean;
 };
+
+export type CurrentPageType =
+  | "Repositories"
+  | "Forks"
+  | "Following"
+  | "Followers"
+  | "Starred";

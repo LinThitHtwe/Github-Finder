@@ -9,6 +9,7 @@ import Repositories from "../components/Repositories";
 import Follow from "../components/Follow";
 import StaredRepos from "../components/StaredRepos";
 import ErrorComponent from "@/components/ErrorComponent";
+import { CurrentPageType } from "@/types/types";
 
 export default function Home() {
   const username = useNameSlice((state) => state.username);
@@ -26,8 +27,7 @@ export default function Home() {
 
   const handleErrorNameSet = (errorName: string) => setErrorName(errorName);
 
-  const [currentTab, setCurrentTab] = useState("Repositories");
-
+  const [currentTab, setCurrentTab] = useState<CurrentPageType>("Repositories");
   const renderTabContent = () => {
     switch (currentTab) {
       case "Repositories":
@@ -53,12 +53,14 @@ export default function Home() {
       <Navbar />
       {!errorName && (
         <div className="flex  h-auto  flex-wrap gap-2 overflow-hidden  p-5 text-primary md:flex-nowrap md:gap-10 md:p-8 lg:p-10">
-          <UserProfile handleErrorNameSet={handleErrorNameSet} />
+          <UserProfile
+            handleErrorNameSet={handleErrorNameSet}
+            setCurrentTab={setCurrentTab}
+          />
 
           <div className=" w-full md:w-3/4">
             <img
               src={`https://github-contributions-api.deno.dev/${username}.svg?scheme=deeppurple&no-total=false&font-color=AB88E1`}
-              //  src={""}
               alt={`${username}'s Contribution Graph`}
               width={800}
               height={400}

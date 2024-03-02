@@ -18,13 +18,15 @@ import Link from "next/link";
 import React from "react";
 import { useQuery } from "react-query";
 import { error as errorConstant } from "../errors/constant";
-import { GitHubUser } from "@/types/types";
+import { CurrentPageType, GitHubUser } from "@/types/types";
 import LoadingProfile from "./skeletons/LoadingProfile";
 
 const UserProfile = ({
   handleErrorNameSet,
+  setCurrentTab,
 }: {
   handleErrorNameSet: (errorName: string) => void;
+  setCurrentTab: React.Dispatch<React.SetStateAction<CurrentPageType>>;
 }) => {
   const username = useNameSlice((state) => state.username);
   const { data, error, isLoading } = useQuery<GitHubUser, Error>(
@@ -125,23 +127,41 @@ const UserProfile = ({
                 </li>
               </ul>
               <ul className="my-8 list-none  lg:px-4">
-                <li className="mt-4 flex items-center gap-5">
-                  Repositories
-                  <FontAwesomeIcon
-                    icon={faBookBookmark}
-                    className="text-text"
-                  />
-                  <span className="">{formatCount(data.public_repos)}</span>
+                <li>
+                  <button
+                    aria-label="for repositories tab"
+                    onClick={() => setCurrentTab("Repositories")}
+                    className="li-tab-stats"
+                  >
+                    Repositories
+                    <FontAwesomeIcon
+                      icon={faBookBookmark}
+                      className="text-text"
+                    />
+                    <span className="">{formatCount(data.public_repos)}</span>
+                  </button>
                 </li>
-                <li className="mt-4 flex items-center gap-5">
-                  Followers
-                  <FontAwesomeIcon icon={faUsers} className="text-text" />
-                  <span className="">{formatCount(data.followers)}</span>
+                <li>
+                  <button
+                    aria-label="for followers tab"
+                    onClick={() => setCurrentTab("Followers")}
+                    className="li-tab-stats"
+                  >
+                    Followers
+                    <FontAwesomeIcon icon={faUsers} className="text-text" />
+                    <span className="">{formatCount(data.followers)}</span>
+                  </button>
                 </li>
-                <li className="mt-4 flex items-center gap-5">
-                  Following
-                  <FontAwesomeIcon icon={faUsers} className="text-text" />
-                  <span className="">{formatCount(data.following)}</span>
+                <li>
+                  <button
+                    aria-label="for following tab"
+                    onClick={() => setCurrentTab("Following")}
+                    className="li-tab-stats"
+                  >
+                    Following
+                    <FontAwesomeIcon icon={faUsers} className="text-text" />
+                    <span className="">{formatCount(data.following)}</span>
+                  </button>
                 </li>
 
                 <li className="mt-4 flex items-center gap-5 break-words ">
