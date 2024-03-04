@@ -116,6 +116,7 @@ const Follow = ({ isFollowing }: { isFollowing: boolean }) => {
                   </div>
                   <div className=" flex  flex-col justify-center gap-2">
                     <button
+                      title={user.login}
                       aria-label={`Search ${user.login}`}
                       onClick={() => handleOnClickName(user.login)}
                       className={`block break-all text-start  text-xl font-semibold transition-all duration-300 hover:-translate-y-1 hover:text-text   lg:mr-16  `}

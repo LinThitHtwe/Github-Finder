@@ -63,7 +63,10 @@ const RepositoryCard = ({ data }: { data: Repository[] }) => {
             >
               <div className="inner h-full w-full rounded-[0.6rem] bg-soft-background p-2">
                 <div className=" mx-3  flex items-center justify-between ">
-                  <p className="  w-[88%] truncate text-2xl  font-semibold tracking-tight group-hover:z-10">
+                  <p
+                    title={repo.name}
+                    className="  w-[88%] truncate text-2xl  font-semibold tracking-tight group-hover:z-10"
+                  >
                     {repo.name}
                   </p>
                   <Link
