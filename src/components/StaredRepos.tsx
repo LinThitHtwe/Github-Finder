@@ -4,7 +4,7 @@ import { useQuery } from "react-query";
 import { fetchStarredData } from "@/api/fetchMethods";
 import { useNameSlice } from "../store/nameSlice";
 import RepositoryCard from "./RepositoryCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Repository } from "../types/types";
 import PaginatedComponent from "./PaginationComponent";
 import LoadingRepository from "./skeletons/LoadingRepository";
@@ -18,6 +18,9 @@ const StaredRepos = () => {
   const handlePageChange = (selected: { selected: number }) => {
     setCurrentPage(selected.selected);
   };
+  useEffect(() => {
+    setCurrentPage(0);
+  }, [username]);
 
   return (
     <>

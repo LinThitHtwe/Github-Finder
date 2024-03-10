@@ -80,6 +80,10 @@ const Follow = ({ isFollowing }: { isFollowing: boolean }) => {
   const handlePageChange = (selected: { selected: number }) => {
     setCurrentPage(selected.selected);
   };
+
+  useEffect(() => {
+    setCurrentPage(0);
+  }, [username]);
   return (
     <>
       <div className="mt-10 grid gap-5  min-[550px]:grid-cols-2 ">

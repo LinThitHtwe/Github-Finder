@@ -21,7 +21,7 @@ const Repositories = ({ isForked }: { isForked: boolean }) => {
 
   useEffect(() => {
     setCurrentPage(0);
-  }, [isForked]);
+  }, [isForked, username]);
   return (
     <>
       {data && data.length > 0 && (
