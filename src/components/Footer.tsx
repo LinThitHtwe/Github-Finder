@@ -43,7 +43,7 @@ const Footer = () => {
         <Link
           target="_blank"
           aria-label="My Github Account"
-          href={`https://github.com/LinThit27`}
+          href={`https://github.com/LinThitHtwe`}
           className="text-primary underline"
         >
           Lin Thit Htwe
