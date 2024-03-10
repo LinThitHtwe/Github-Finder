@@ -9,6 +9,6 @@ type Actions = {
 };
 
 export const useNameSlice = create<Store & Actions>((set) => ({
-  username: "LinThit27",
+  username: "LinThitHtwe",
   setName: (username) => set({ username }),
 }));

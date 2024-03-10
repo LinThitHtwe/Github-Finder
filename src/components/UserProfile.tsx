@@ -43,7 +43,7 @@ const UserProfile = ({
         <>
           <div className=" z-10 mx-auto h-52 w-52 md:h-44 md:w-44  min-[914px]:h-52 min-[914px]:w-52">
             <Image
-              alt="LinThit27"
+              alt={`${username} 's image`}
               src={`${data.avatar_url}`}
               width={400}
               quality={70}

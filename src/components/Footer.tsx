@@ -14,7 +14,7 @@ const Footer = () => {
       <h1 className="text-center text-base">Made With ❤️ and NextJs</h1>
       <div className="flex items-center gap-6 text-2xl transition-all  ease-in-out">
         <Link
-          href={"https://github.com/LinThit27/Github-Finder"}
+          href={"https://github.com/LinThitHtwe/Github-Finder"}
           target="_blank"
           aria-label="My Github Repo"
           className="duration-500 hover:-translate-y-1 hover:text-[#f5f5f5]"
