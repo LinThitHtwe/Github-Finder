@@ -40,7 +40,7 @@ const Navbar = () => {
           onClick={() => setSearchUsername("")}
         >
           <FontAwesomeIcon
-            className={`absolute bottom-[32%] right-[3.05rem] text-base min-[640px]:right-[4rem] min-[768px]:right-[22%] `}
+            className={`absolute bottom-[32%] right-[3.05rem] cursor-pointer text-base min-[640px]:right-[4rem] min-[768px]:right-[22%] `}
             icon={faXmark}
           />
         </span>
