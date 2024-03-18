@@ -25,7 +25,7 @@
 }
 
 .li-tab-stats {
-  @apply mt-4 flex w-fit items-center gap-5 border-primary transition-all duration-75 ease-in-out hover:border-b;
+  @apply mt-4 flex w-fit items-center gap-5 border-text/80 transition-all duration-75 ease-in-out hover:border-b hover:text-text;
 }
 
 .blob {
