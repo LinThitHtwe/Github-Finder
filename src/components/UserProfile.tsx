@@ -15,11 +15,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { formatDistanceToNow } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { useQuery } from "react-query";
-import { error as errorConstant } from "../errors/constant";
 import { CurrentPageType, GitHubUser } from "@/types/types";
 import LoadingProfile from "./skeletons/LoadingProfile";
+import { useAccountTypeSlice } from "@/store/accountTypeSlice";
 
 const UserProfile = ({
   handleErrorNameSet,
@@ -29,6 +29,7 @@ const UserProfile = ({
   setCurrentTab: React.Dispatch<React.SetStateAction<CurrentPageType>>;
 }) => {
   const username = useNameSlice((state) => state.username);
+  const updateUserType = useAccountTypeSlice((state) => state.setIsUser);
   const { data, error, isLoading } = useQuery<GitHubUser, Error>(
     ["profile", username],
     () => fetchUserData(username),
@@ -36,6 +37,8 @@ const UserProfile = ({
   if (error) {
     handleErrorNameSet(error.name);
   }
+
+  data?.type == "User" ? updateUserType(true) : updateUserType(false);
 
   return (
     <div className="w-full  md:w-1/4 ">

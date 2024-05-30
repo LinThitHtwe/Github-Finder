@@ -10,9 +10,11 @@ import Follow from "../components/Follow";
 import StaredRepos from "../components/StaredRepos";
 import ErrorComponent from "@/components/ErrorComponent";
 import { CurrentPageType } from "@/types/types";
+import { useAccountTypeSlice } from "@/store/accountTypeSlice";
 
 export default function Home() {
   const username = useNameSlice((state) => state.username);
+  const isUser = useAccountTypeSlice((state) => state.isUser);
   const queryClient = useQueryClient();
   const [errorName, setErrorName] = useState<string | null>(null);
 
@@ -59,13 +61,15 @@ export default function Home() {
           />
 
           <div className=" w-full md:w-3/4">
-            <img
-              src={`https://github-contributions-api.deno.dev/${username}.svg?scheme=deeppurple&no-total=false&font-color=AB88E1`}
-              alt={`${username}'s Contribution Graph`}
-              width={800}
-              height={400}
-              className="mx-auto w-full"
-            />
+            {isUser && (
+              <img
+                src={`https://github-contributions-api.deno.dev/${username}.svg?scheme=deeppurple&no-total=false&font-color=AB88E1`}
+                alt={`${username}'s Contribution Graph`}
+                width={800}
+                height={400}
+                className="mx-auto w-full"
+              />
+            )}
 
             <div className="mt-6 flex justify-evenly overflow-x-auto border-b  border-primary/30 pb-0 ">
               <button
